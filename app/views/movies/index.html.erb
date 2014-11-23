@@ -1,6 +1,6 @@
 <h1>Hello</h1>
 
 <% @movies.each do |movie| %>
-  <p><%= movie[:title] %>, <%= movie[:director] %></p>
-  <img src="<%= movie[:url] %>">
+  <p><%= movie.title %>, <%= movie.director %></p>
+  <img src="<%= movie.url %>">
 <% end %>

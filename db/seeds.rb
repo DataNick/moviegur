@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Movie.create!(
+  :title  => "The old church on the coast of White sea",
+  :director => "Sergey Ershov",
+  :url    => "http://bitmakerlabs.s3.amazonaws.com/photogur/house.jpg"
+)
+
+Movie.create!(
+  :title  => "Sea Power",
+  :director => "Stephen Scullion",
+  :url    => "http://bitmakerlabs.s3.amazonaws.com/photogur/wave.jpg"
+)
+
+Movie.create!(
+  :title  => "Into the Poppies",
+  :director => "John Wilhelm",
+  :url    => "http://bitmakerlabs.s3.amazonaws.com/photogur/girl.jpg"
+)
