@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post 'movies' => 'movies#create' # this is a new line of code
   get 'movies/new' => 'movies#new'
 
-  get 'movies/:id' => 'movies#show', as: 'movie'
+  get 'movies/:id' => 'movies#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
