@@ -34,6 +34,12 @@ class MoviesController < ApplicationController
 	  end
 	end
 
+	def destroy
+	  @movie = Movie.find(params[:id])
+	  @movie.destroy
+	  redirect_to movies_url
+	end
+
 	private
 	def movie_params
 		params.require(:movie).permit(:director, :title, :url)
