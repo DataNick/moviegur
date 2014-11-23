@@ -1,6 +1,7 @@
-<h1>Hello</h1>
+<h1>Hello (<%= @movies.length %>)</h1>
+<%= link_to "New Movie", "/movies/new" %>
 
 <% @movies.each do |movie| %>
   <p><%= movie.title %>, <%= movie.director %></p>
-  <img src="<%= movie.url %>">
+  <%= link_to image_tag(movie.url), "/movies/#{movie.id}" %>
 <% end %>
