@@ -20,6 +20,20 @@ class MoviesController < ApplicationController
 		end
 	end
 
+	def edit
+	  @movie = Movie.find(params[:id])
+	end
+
+	def update
+	  @movie = Movie.find(params[:id])
+
+	  if @movie.update_attributes(movie_params)
+	    redirect_to "/movies/#{@movie.id}"
+	  else
+	    render :edit
+	  end
+	end
+
 	private
 	def movie_params
 		params.require(:movie).permit(:director, :title, :url)

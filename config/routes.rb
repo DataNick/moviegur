@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   post 'movies' => 'movies#create' # this is a new line of code
   get 'movies/new' => 'movies#new'
 
+  get 'movies/:id/edit' => "movies#edit", as: "edit_movie"
+  patch 'movies/:id' => "movies#update"
+
   get 'movies/:id' => 'movies#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

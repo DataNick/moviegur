@@ -1,0 +1,23 @@
+<h1>Edit Movie</h1>
+
+<p>
+  <%= link_to "Back", @movie %>
+</p>
+
+<%= form_for @movie do |f| %>
+  <p>
+    <%= f.label "director" %><br>
+    <%= f.text_field "director" %>
+  </p>
+  <p>
+    <%= f.label "title" %><br>
+    <%= f.text_field "title" %>
+  </p>
+  <p>
+    <%= f.label "url" %><br>
+    <%= f.text_field "url" %>
+  </p>
+  <p>
+    <%= submit_tag "Save" %>
+  </p>
+<% end %>
