@@ -1,20 +1,36 @@
-<h1>Add a Movie</h1>
-<%= link_to "Back to Movies", movies_url %>
-
-<%= form_for @movie do |f| %>
-  <p>
-    <%= f.label "director" %><br>
-    <%= f.text_field "director" %>
-  </p>
-  <p>
-    <%= f.label "title" %><br>
-    <%= f.text_field "title" %>
-  </p>
-  <p>
-    <%= f.label "url" %><br>
-    <%= f.text_field "url" %>
-  </p>
-  <p>
-    <%= f.submit "Save" %>
-  </p>
-<% end %>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Add a Movie</h1>
+    </div>
+     <div class="form-group">
+    <ul class='nav nav-tabs'>
+      <li><%= link_to "Back to Movies", movies_url, :class => 'navbar-toggle collapsed' %></li>
+      </ul>
+      </br>
+      <%= form_for @movie do |f| %>
+        <div class="form-group">
+        <p>
+          <%= f.label "director" %><br>
+          <%= f.text_field "director", :class => "form-control", :placeholder => "Who directs the movies you like?"%>
+        </p>
+        </div>
+        <div class="form-group">
+        <p>
+          <%= f.label "title" %><br>
+          <%= f.text_field "title", :class => "form-control", :placeholder => "Name a movie they made" %>
+        </p>
+        </div>
+        <div class="form-group">
+        <p>
+          <%= f.label "url" %><br>
+          <%= f.text_field "url", :class => "form-control", :placeholder => "Where can I find the flick - enter the url(www.example.com)" %>
+        </p>
+        </div>
+        <div class="form-group">
+        <p>
+          <%= f.submit "Create", :type => "submit", :class => 'btn btn-success btn-block'%>
+        </p>
+        </div>
+      <% end %>
+  </div>
+</div>

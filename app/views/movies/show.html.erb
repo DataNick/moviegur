@@ -1,7 +1,12 @@
-<%= link_to "Back to Movies", movies_url %> | <%= link_to "Edit", edit_movie_path(@movie) %> | <%= link_to "Delete", @movie, method: :delete, data: {confirm: "Are you sure you want to delete this movie?"}  %>
+<div class="container">
+	<ul class="nav nav-tabs">
+		<li><%= link_to "Back to Movies", movies_url, :class => 'navbar-toggle collapsed'%></li>
+		<li><%= link_to "Edit", edit_movie_path(@movie), :class => 'navbar-toggle collapsed' %></li>
+		<li><%= link_to "Delete", @movie, method: :delete, data: {confirm: "Are you sure you want to delete this movie?"}, :class => 'navbar-toggle collapsed'%></li>
+	</ul>
 
 
 
-<p><%= @movie.title %>, <%= @movie.director %></p>
+<p><dt><%= @movie.title %></dt> <%= @movie.director %></p>
 <%= image_tag @movie.url %>
-
+</div>

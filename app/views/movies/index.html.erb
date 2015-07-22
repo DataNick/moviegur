@@ -1,7 +1,31 @@
-<h1>Hello (<%= @movies.length %>)</h1>
-<%= link_to "New Movie", "/movies/new" %>
+<table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Photo</th>
+          </tr>
+        </thead>
 
-<% @movies.each do |movie| %>
-  <p><%= movie.title %>, <%= movie.director %></p>
-  <%= link_to image_tag(movie.url), "/movies/#{movie.id}" %>
-<% end %>
+<div class="container">
+	<div class="row">
+		<h1>There are <%= @movies.length %> Movies</h1>
+	</div>
+	<div class="row">
+		<%= link_to "New Movie", "/movies/new", :class => 'btn btn-success btn-sm'%>
+	</div>
+	 
+		<% @movies.each do |movie| %>
+  			<tr>
+  			<td><dt><%= movie.title %></dt></td> <td><%= movie.director %></td>
+ 			<td><%= link_to image_tag(movie.url), "/movies/#{movie.id}" %></td>
+ 			</tr>
+		<% end %>
+		
+		</table>
+	
+</div>
+
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
